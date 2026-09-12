@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#062b63" />
+    <meta
+      name="description"
+      content="Best Clear Astana — клининг и химчистка мягкой мебели в Астане: генеральная уборка, уборка после ремонта и влажная уборка."
+    />
+    <title>Best Clear Astana — клининг и химчистка мягкой мебели в Астане</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23062b63'/%3E%3Cpath d='M32 10l4.3 16.7L53 32l-16.7 5.3L32 54l-4.3-16.7L11 32l16.7-5.3L32 10z' fill='%23ff5b1a'/%3E%3Ccircle cx='49' cy='15' r='4' fill='%23fff'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --navy: #062b63;
+        --navy-deep: #041c42;
+        --blue: #eaf3ff;
+        --blue-strong: #d9eaff;
+        --orange: #ff5b1a;
+        --orange-dark: #e84e13;
+        --red: #f04438;
+        --green: #10a33a;
+        --text: #101b2c;
+        --muted: #667383;
+        --line: #dbe4ed;
+        --white: #ffffff;
+        --container: 1160px;
+        --shadow: 0 20px 55px rgba(6, 43, 99, 0.12);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--white);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 100;
+        top: -60px;
+        left: 16px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        color: var(--white);
+        background: var(--navy);
+        transition: top 180ms ease;
+      }
+
+      .skip-link:focus {
+        top: 16px;
+      }
+
+      .topline {
+        color: var(--white);
+        background: var(--orange);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .topline-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 34px;
+        gap: 18px;
+      }
+
+      .topline strong {
+        letter-spacing: 0.02em;
+      }
+
+      .topline span {
+        opacity: 0.9;
+      }
+
+      .site-header {
+        position: sticky;
+        z-index: 30;
+        top: 0;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid rgba(219, 228, 237, 0.8);
+        backdrop-filter: blur(18px);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+        gap: 28px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        color: var(--navy);
+        font-size: 0.88rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        line-height: 1.04;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border-radius: 12px;
+        color: var(--white);
+        background: var(--navy);
+        font-size: 1.28rem;
+        line-height: 1;
+      }
+
+      .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-link {
+        color: #647083;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: color 180ms ease;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus-visible {
+        color: var(--navy);
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--navy);
+        background: var(--white);
+        cursor: pointer;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 22px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-size: 0.94rem;
+        font-weight: 800;
+        transition: transform 180ms ease, background 180ms ease, color 180ms ease,
+          box-shadow 180ms ease, border-color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button:focus-visible,
+      .nav-link:focus-visible,
+      .menu-toggle:focus-visible,
+      .service-card:focus-visible,
+      .payment-card:focus-visible {
+        outline: 3px solid rgba(255, 91, 26, 0.28);
+        outline-offset: 4px;
+      }
+
+      .button-primary {
+        color: var(--white);
+        background: var(--orange);
+        box-shadow: 0 10px 24px rgba(255, 91, 26, 0.22);
+      }
+
+      .button-primary:hover {
+        background: var(--orange-dark);
+        box-shadow: 0 14px 30px rgba(255, 91, 26, 0.28);
+      }
+
+      .button-navy {
+        color: var(--white);
+        background: var(--navy);
+        box-shadow: 0 10px 24px rgba(6, 43, 99, 0.16);
+      }
+
+      .button-navy:hover {
+        background: var(--navy-deep);
+      }
+
+      .button-outline {
+        color: var(--navy);
+        border-color: var(--line);
+        background: var(--white);
+      }
+
+      .button-outline:hover {
+        border-color: var(--navy);
+        background: var(--blue);
+      }
+
+      .button-small {
+        min-height: 42px;
+        padding-inline: 16px;
+        font-size: 0.83rem;
+      }
+
+      .arrow {
+        display: inline-grid;
+        width: 25px;
+        height: 25px;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.18);
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      .button-primary .arrow {
+        color: var(--orange);
+        background: var(--white);
+      }
+
+      .button-outline .arrow {
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 89% 5%, rgba(255, 91, 26, 0.1), transparent 22rem),
+          linear-gradient(180deg, #fff 0%, #fff 65%, var(--blue) 100%);
+      }
+
+      .hero::before {
+        position: absolute;
+        right: -120px;
+        bottom: -250px;
+        width: 560px;
+        height: 560px;
+        border: 1px solid rgba(6, 43, 99, 0.08);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 52px rgba(6, 43, 99, 0.028),
+          0 0 0 110px rgba(6, 43, 99, 0.018);
+        content: "";
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+        align-items: center;
+        gap: clamp(42px, 7vw, 96px);
+        min-height: 655px;
+        padding: 74px 0 96px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--orange);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        content: "";
+      }
+
+      .hero h1 {
+        max-width: 720px;
+        margin: 22px 0 20px;
+        color: var(--navy);
+        font-size: clamp(3rem, 6.4vw, 6.2rem);
+        font-weight: 820;
+        letter-spacing: -0.075em;
+        line-height: 0.93;
+      }
+
+      .hero h1 span {
+        color: var(--orange);
+      }
+
+      .hero-description {
+        max-width: 630px;
+        margin: 0;
+        color: #405064;
+        font-size: clamp(1.04rem, 1.8vw, 1.26rem);
+        line-height: 1.48;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .hero-note::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 5px rgba(16, 163, 58, 0.1);
+        content: "";
+      }
+
+      .hero-preview {
+        position: relative;
+        min-height: 430px;
+        padding: 24px;
+        border: 1px solid rgba(6, 43, 99, 0.12);
+        border-radius: 32px;
+        background: rgba(234, 243, 255, 0.82);
+        box-shadow: var(--shadow);
+      }
+
+      .preview-sun {
+        position: absolute;
+        top: -20px;
+        right: 34px;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: rgba(255, 91, 26, 0.14);
+      }
+
+      .preview-window {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        min-height: 382px;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.76);
+      }
+
+      .window-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .window-dots {
+        display: flex;
+        gap: 5px;
+      }
+
+      .window-dots i {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--orange);
+      }
+
+      .window-dots i:nth-child(2) {
+        background: var(--navy);
+      }
+
+      .window-dots i:nth-child(3) {
+        background: #7bc5ff;
+      }
+
+      .preview-center {
+        position: relative;
+        display: grid;
+        min-height: 200px;
+        place-items: center;
+      }
+
+      .preview-ring {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border: 1px dashed rgba(6, 43, 99, 0.25);
+        border-radius: 50%;
+      }
+
+      .preview-ring::before,
+      .preview-ring::after {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--orange);
+        content: "";
+      }
+
+      .preview-ring::before {
+        top: 12px;
+        left: 28px;
+      }
+
+      .preview-ring::after {
+        right: 5px;
+        bottom: 30px;
+        width: 8px;
+        height: 8px;
+        background: var(--navy);
+      }
+
+      .preview-spark {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        width: 126px;
+        height: 126px;
+        place-items: center;
+        border: 1px solid rgba(6, 43, 99, 0.12);
+        border-radius: 42% 58% 48% 52%;
+        color: var(--white);
+        background: var(--navy);
+        box-shadow: 0 16px 30px rgba(6, 43, 99, 0.18);
+        font-size: 4rem;
+        transform: rotate(-9deg);
+      }
+
+      .preview-spark span {
+        transform: rotate(9deg);
+      }
+
+      .preview-pills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .preview-pill {
+        padding: 14px 15px;
+        border-radius: 15px;
+        color: var(--navy);
+        background: var(--blue);
+        font-size: 0.8rem;
+        font-weight: 800;
+      }
+
+      .preview-pill:last-child {
+        color: var(--white);
+        background: var(--orange);
+      }
+
+      .section {
+        padding: 104px 0;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 34px;
+        margin-bottom: 42px;
+      }
+
+      .section-heading h2 {
+        max-width: 720px;
+        margin: 14px 0 0;
+        color: var(--navy);
+        font-size: clamp(2.2rem, 4.7vw, 4.7rem);
+        font-weight: 800;
+        letter-spacing: -0.075em;
+        line-height: 0.96;
+      }
+
+      .section-heading p {
+        max-width: 320px;
+        margin: 0 0 4px;
+        color: var(--muted);
+      }
+
+      .services {
+        background: var(--white);
+      }
+
+      .service-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .service-card {
+        position: relative;
+        display: flex;
+        min-height: 290px;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--blue);
+        transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+      }
+
+      .service-card:nth-child(2) {
+        background: #fff4ef;
+      }
+
+      .service-card:nth-child(3) {
+        background: #edf9f4;
+      }
+
+      .service-card:nth-child(4) {
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .service-card:hover {
+        border-color: rgba(6, 43, 99, 0.22);
+        box-shadow: var(--shadow);
+        transform: translateY(-5px);
+      }
+
+      .service-card::after {
+        position: absolute;
+        right: -48px;
+        bottom: -58px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid rgba(6, 43, 99, 0.14);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .service-card:nth-child(4)::after {
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .service-top {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .service-number {
+        color: var(--orange);
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+      }
+
+      .service-card:nth-child(4) .service-number {
+        color: var(--orange);
+      }
+
+      .service-symbol {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        border-radius: 15px;
+        color: var(--navy);
+        background: var(--white);
+        font-size: 1.4rem;
+        line-height: 1;
+      }
+
+      .service-card:nth-child(2) .service-symbol {
+        color: var(--white);
+        background: var(--orange);
+      }
+
+      .service-card:nth-child(3) .service-symbol {
+        color: var(--navy);
+        background: #bdf0dc;
+      }
+
+      .service-card:nth-child(4) .service-symbol {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .service-card h3 {
+        position: relative;
+        z-index: 1;
+        max-width: 230px;
+        margin: 0 0 10px;
+        font-size: clamp(1.35rem, 2vw, 1.85rem);
+        font-weight: 800;
+        letter-spacing: -0.06em;
+        line-height: 0.98;
+      }
+
+      .service-card p {
+        position: relative;
+        z-index: 1;
+        max-width: 250px;
+        margin: 0;
+        color: #627286;
+        font-size: 0.9rem;
+      }
+
+      .service-card:nth-child(4) p {
+        color: rgba(255, 255, 255, 0.63);
+      }
+
+      .payment-section {
+        background: var(--blue);
+      }
+
+      .payment-wrap {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .payment-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 26px 0;
+      }
+
+      .payment-intro h2 {
+        max-width: 430px;
+        margin: 16px 0 14px;
+        color: var(--navy);
+        font-size: clamp(2.2rem, 4.2vw, 4.3rem);
+        font-weight: 800;
+        letter-spacing: -0.075em;
+        line-height: 0.95;
+      }
+
+      .payment-intro p {
+        max-width: 380px;
+        margin: 0;
+        color: #5e7087;
+      }
+
+      .payment-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .payment-card {
+        position: relative;
+        display: flex;
+        min-height: 250px;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 28px;
+        border-radius: var(--radius);
+        color: var(--white);
+        background: var(--red);
+        box-shadow: 0 18px 42px rgba(240, 68, 56, 0.18);
+      }
+
+      .payment-card:nth-child(2) {
+        color: var(--white);
+        background: #fa6a3a;
+        box-shadow: 0 18px 42px rgba(250, 106, 58, 0.18);
+      }
+
+      .payment-card::after {
+        position: absolute;
+        right: -54px;
+        bottom: -70px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .payment-label {
+        position: relative;
+        z-index: 1;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .payment-logo {
+        position: relative;
+        z-index: 1;
+        margin-top: 30px;
+        font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+        font-weight: 900;
+        letter-spacing: -0.07em;
+        line-height: 0.95;
+      }
+
+      .payment-description {
+        position: relative;
+        z-index: 1;
+        max-width: 215px;
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 0.88rem;
+      }
+
+      .payment-footnote {
+        margin: 16px 0 0;
+        color: #65758a;
+        font-size: 0.78rem;
+      }
+
+      .benefits {
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .benefits .eyebrow {
+        color: var(--orange);
+      }
+
+      .benefits .section-heading h2 {
+        color: var(--white);
+      }
+
+      .benefits .section-heading p {
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .benefit {
+        min-height: 230px;
+        padding: 26px 24px 26px 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .benefit + .benefit {
+        padding-left: 24px;
+      }
+
+      .benefit:last-child {
+        border-right: 0;
+      }
+
+      .benefit-number {
+        display: inline-grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        color: var(--orange);
+        font-size: 0.78rem;
+        font-weight: 900;
+      }
+
+      .benefit h3 {
+        margin: 58px 0 9px;
+        font-size: 1.18rem;
+        letter-spacing: -0.03em;
+      }
+
+      .benefit p {
+        max-width: 260px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.59);
+        font-size: 0.9rem;
+      }
+
+      .process {
+        background: var(--white);
+      }
+
+      .process-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .process-item {
+        min-height: 200px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fbfdff;
+      }
+
+      .process-number {
+        color: var(--orange);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+
+      .process-item h3 {
+        margin: 62px 0 9px;
+        color: var(--navy);
+        font-size: 1.16rem;
+        letter-spacing: -0.03em;
+      }
+
+      .process-item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .contact {
+        background: var(--blue);
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .contact-main,
+      .contact-side {
+        min-height: 390px;
+        padding: clamp(28px, 5vw, 54px);
+        border-radius: var(--radius);
+      }
+
+      .contact-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--white);
+        background: var(--navy);
+      }
+
+      .contact-main .eyebrow {
+        color: var(--orange);
+      }
+
+      .contact-main h2 {
+        max-width: 580px;
+        margin: 34px 0 16px;
+        font-size: clamp(2.4rem, 5.1vw, 5rem);
+        font-weight: 800;
+        letter-spacing: -0.08em;
+        line-height: 0.94;
+      }
+
+      .contact-main p {
+        max-width: 390px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .contact-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(6, 43, 99, 0.12);
+        background: var(--white);
+      }
+
+      .location-symbol {
+        display: grid;
+        width: 70px;
+        height: 70px;
+        place-items: center;
+        border-radius: 22px;
+        color: var(--white);
+        background: var(--orange);
+        font-size: 2rem;
+      }
+
+      .contact-side h3 {
+        max-width: 330px;
+        margin: 22px 0 12px;
+        color: var(--navy);
+        font-size: clamp(2rem, 3.5vw, 3.3rem);
+        font-weight: 800;
+        letter-spacing: -0.075em;
+        line-height: 0.95;
+      }
+
+      .contact-side p {
+        max-width: 300px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .side-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 54px;
+        margin-top: 28px;
+        padding: 0 16px 0 18px;
+        border-radius: 14px;
+        color: var(--white);
+        background: var(--navy);
+        font-size: 0.94rem;
+        font-weight: 800;
+        transition: transform 180ms ease, background 180ms ease;
+      }
+
+      .side-link:hover {
+        background: var(--orange);
+        transform: translateY(-2px);
+      }
+
+      .side-link span:last-child {
+        display: grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--navy);
+        background: var(--white);
+      }
+
+      .site-footer {
+        color: #6a7788;
+        background: var(--white);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 28px 0 32px;
+        border-top: 1px solid var(--line);
+        font-size: 0.84rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+      }
+
+      .footer-links a {
+        color: var(--navy);
+        font-weight: 800;
+      }
+
+      .footer-links a:hover {
+        color: var(--orange);
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 650ms ease, transform 650ms ease;
+      }
+
+      [data-reveal].is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding-top: 58px;
+        }
+
+        .hero-preview {
+          max-width: 620px;
+          width: 100%;
+          margin-inline: auto;
+        }
+
+        .service-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .payment-wrap,
+        .contact-box {
+          grid-template-columns: 1fr;
+        }
+
+        .payment-intro {
+          padding: 0 0 24px;
+        }
+
+        .payment-intro h2 {
+          max-width: 650px;
+        }
+
+        .process-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 700px) {
+        .container {
+          width: min(var(--container), calc(100% - 32px));
+        }
+
+        .topline-inner {
+          min-height: 32px;
+          font-size: 0.72rem;
+        }
+
+        .topline span {
+          display: none;
+        }
+
+        .header-inner {
+          min-height: 68px;
+        }
+
+        .main-nav {
+          position: absolute;
+          top: 76px;
+          right: 16px;
+          left: 16px;
+          display: none;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 3px;
+          padding: 14px;
+          border: 1px solid var(--line);
+          border-radius: 18px;
+          background: var(--white);
+          box-shadow: var(--shadow);
+        }
+
+        .main-nav.is-open {
+          display: flex;
+        }
+
+        .main-nav .nav-link {
+          padding: 11px 5px;
+        }
+
+        .main-nav .button {
+          width: 100%;
+          margin-top: 5px;
+        }
+
+        .menu-toggle {
+          display: grid;
+          place-items: center;
+        }
+
+        .section {
+          padding: 76px 0;
+        }
+
+        .hero-inner {
+          min-height: auto;
+          padding: 60px 0 78px;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.15rem, 15.5vw, 5rem);
+        }
+
+        .hero-actions,
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .hero-actions .button {
+          min-height: 56px;
+        }
+
+        .hero-preview {
+          min-height: 340px;
+          padding: 14px;
+          border-radius: 24px;
+        }
+
+        .preview-window {
+          min-height: 310px;
+          padding: 18px;
+        }
+
+        .preview-spark {
+          width: 98px;
+          height: 98px;
+          font-size: 3rem;
+        }
+
+        .preview-ring {
+          width: 148px;
+          height: 148px;
+        }
+
+        .section-heading {
+          display: block;
+          margin-bottom: 30px;
+        }
+
+        .section-heading p {
+          margin-top: 17px;
+        }
+
+        .service-list,
+        .payment-cards,
+        .benefits-grid,
+        .process-list {
+          grid-template-columns: 1fr;
+        }
+
+        .service-card {
+          min-height: 245px;
+        }
+
+        .payment-card {
+          min-height: 220px;
+        }
+
+        .benefits-grid {
+          gap: 0;
+        }
+
+        .benefit,
+        .benefit + .benefit {
+          min-height: 0;
+          padding: 22px 0;
+          border-right: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .benefit:last-child {
+          border-bottom: 0;
+        }
+
+        .benefit h3 {
+          margin-top: 26px;
+        }
+
+        .process-item {
+          min-height: 0;
+        }
+
+        .process-item h3 {
+          margin-top: 28px;
+        }
+
+        .contact-main,
+        .contact-side {
+          min-height: 340px;
+          padding: 28px;
+        }
+
+        .contact-actions,
+        .contact-actions .button {
+          width: 100%;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="topline">
+      <div class="container topline-inner">
+        <strong>Клининг и химчистка мягкой мебели в Астане</strong>
+        <span>Генеральная · после ремонта · влажная уборка · химчистка мягкой мебели</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Best Clear Astana — на главную">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Best Clear<br />Astana</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span aria-hidden="true">☰</span>
+        </button>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a class="nav-link" href="#services">Услуги</a>
+          <a class="nav-link" href="#payment">Оплата</a>
+          <a class="nav-link" href="#process">Как работаем</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+          <a
+            class="button button-primary button-small"
+            href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Заказать уборку <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div data-reveal>
+            <span class="eyebrow">Best Clear Astana</span>
+            <h1>Услуги клининга <span>в Астане</span></h1>
+            <p class="hero-description">
+              Профессиональная уборка квартир, домов и помещений. Генеральная, после
+              ремонта, влажная уборка и химчистка мягкой мебели — подберём подходящий формат под вашу
+              задачу.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Заказать уборку <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="button button-outline" href="#services">
+                Посмотреть услуги <span class="arrow" aria-hidden="true">↓</span>
+              </a>
+            </div>
+            <div class="hero-note">Работаем по Астане · стоимость рассчитываем по объёму работ</div>
+          </div>
+
+          <div class="hero-preview" aria-label="Преимущества Best Clear Astana" data-reveal>
+            <span class="preview-sun" aria-hidden="true"></span>
+            <div class="preview-window">
+              <div class="window-top">
+                <span>clean space / clear mind</span>
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <div class="preview-center" aria-hidden="true">
+                <span class="preview-ring"></span>
+                <span class="preview-spark"><span>✦</span></span>
+              </div>
+              <div class="preview-pills">
+                <div class="preview-pill">Аккуратно</div>
+                <div class="preview-pill">По договорённости</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div>
+              <span class="eyebrow">Наши услуги</span>
+              <h2>Чистота под вашу задачу.</h2>
+            </div>
+            <p>Расскажите, что нужно убрать — уточним детали и предложим подходящий формат.</p>
+          </div>
+
+          <div class="service-list">
+            <article class="service-card" tabindex="0" data-reveal>
+              <div class="service-top">
+                <span class="service-number">01 / КЛИНИНГ</span>
+                <span class="service-symbol" aria-hidden="true">✦</span>
+              </div>
+              <div>
+                <h3>Генеральная уборка</h3>
+                <p>Тщательная уборка пространства, когда хочется навести порядок от и до.</p>
+              </div>
+            </article>
+
+            <article class="service-card" tabindex="0" data-reveal>
+              <div class="service-top">
+                <span class="service-number">02 / ПОСЛЕ РЕМОНТА</span>
+                <span class="service-symbol" aria-hidden="true">⌁</span>
+              </div>
+              <div>
+                <h3>Уборка после ремонта</h3>
+                <p>Поможем убрать строительную пыль и привести помещение в аккуратный вид.</p>
+              </div>
+            </article>
+
+            <article class="service-card" tabindex="0" data-reveal>
+              <div class="service-top">
+                <span class="service-number">03 / ВЛАЖНАЯ</span>
+                <span class="service-symbol" aria-hidden="true">◌</span>
+              </div>
+              <div>
+                <h3>Влажная уборка</h3>
+                <p>Свежесть и порядок для дома, квартиры или другого помещения.</p>
+              </div>
+            </article>
+
+            <article class="service-card" tabindex="0" data-reveal>
+              <div class="service-top">
+                <span class="service-number">04 / МЯГКАЯ МЕБЕЛЬ</span>
+                <span class="service-symbol" aria-hidden="true">◒</span>
+              </div>
+              <div>
+                <h3>Химчистка мягкой мебели</h3>
+                <p>Уточним материал, объём и задачу, чтобы подобрать формат работ.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section payment-section" id="payment">
+        <div class="container payment-wrap">
+          <div class="payment-intro" data-reveal>
+            <span class="eyebrow">Удобная оплата</span>
+            <h2>Можно оплатить через Kaspi.</h2>
+            <p>
+              Kaspi Red и Kaspi Рассрочка доступны для оплаты заказа — актуальные условия
+              уточняйте при оформлении.
+            </p>
+            <p class="payment-footnote">* Возможность и условия оплаты согласуются с менеджером.</p>
+          </div>
+
+          <div class="payment-cards">
+            <article class="payment-card" tabindex="0" data-reveal>
+              <span class="payment-label">Оплата частями</span>
+              <strong class="payment-logo">KASPI<br />RED</strong>
+              <p class="payment-description">Выберите удобный способ оплаты при согласовании заказа.</p>
+            </article>
+            <article class="payment-card" tabindex="0" data-reveal>
+              <span class="payment-label">Удобное оформление</span>
+              <strong class="payment-logo">Kaspi<br />Рассрочка</strong>
+              <p class="payment-description">Уточним доступные условия для вашего заказа.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section benefits">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div>
+              <span class="eyebrow">Почему Best Clear</span>
+              <h2>Простая уборка без лишних хлопот.</h2>
+            </div>
+            <p>Один понятный диалог — от описания задачи до согласованного результата.</p>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit" data-reveal>
+              <span class="benefit-number">01</span>
+              <h3>Под задачу</h3>
+              <p>Уточняем формат работ, площадь и детали до начала уборки.</p>
+            </article>
+            <article class="benefit" data-reveal>
+              <span class="benefit-number">02</span>
+              <h3>Понятно по условиям</h3>
+              <p>Согласуем объём и стоимость до оформления заказа.</p>
+            </article>
+            <article class="benefit" data-reveal>
+              <span class="benefit-number">03</span>
+              <h3>Удобная связь</h3>
+              <p>Напишите в Instagram — ответим и подскажем следующий шаг.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div>
+              <span class="eyebrow">Как работаем</span>
+              <h2>Четыре шага до чистого пространства.</h2>
+            </div>
+            <p>Без длинных форм: просто опишите задачу удобным способом.</p>
+          </div>
+
+          <div class="process-list">
+            <article class="process-item" data-reveal>
+              <span class="process-number">01 / НАПИШИТЕ</span>
+              <h3>Свяжитесь с нами</h3>
+              <p>Напишите в Instagram и расскажите, какая уборка нужна.</p>
+            </article>
+            <article class="process-item" data-reveal>
+              <span class="process-number">02 / УТОЧНИМ</span>
+              <h3>Обсудим детали</h3>
+              <p>Уточним помещение, объём работ и желаемый формат.</p>
+            </article>
+            <article class="process-item" data-reveal>
+              <span class="process-number">03 / СОГЛАСУЕМ</span>
+              <h3>Назовём условия</h3>
+              <p>Согласуем стоимость, дату и способ оплаты.</p>
+            </article>
+            <article class="process-item" data-reveal>
+              <span class="process-number">04 / НАВЕДЁМ</span>
+              <h3>Наведём порядок</h3>
+              <p>Пространство снова становится свежим и аккуратным.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacts">
+        <div class="container contact-box">
+          <div class="contact-main" data-reveal>
+            <div>
+              <span class="eyebrow">Готовы начать?</span>
+              <h2>Расскажите, что нужно убрать.</h2>
+              <p>Напишите в Instagram — уточним задачу и подскажем подходящий формат.</p>
+            </div>
+            <div class="contact-actions">
+              <a
+                class="button button-primary"
+                href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Написать в Instagram <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-outline" href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">
+                Открыть 2GIS <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-side" data-reveal>
+            <div>
+              <div class="location-symbol" aria-hidden="true">⌖</div>
+              <h3>Best Clear Astana</h3>
+              <p>Клининг и химчистка мягкой мебели в Астане. Найдите нас в 2GIS.</p>
+            </div>
+            <a class="side-link" href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">
+              <span>Открыть карточку в 2GIS</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Best Clear Astana</span>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">2GIS</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+
+        if (menuToggle && mainNav) {
+          menuToggle.addEventListener("click", () => {
+            const isOpen = mainNav.classList.toggle("is-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+            menuToggle.querySelector("span").textContent = isOpen ? "×" : "☰";
+          });
+
+          mainNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              mainNav.classList.remove("is-open");
+              menuToggle.setAttribute("aria-expanded", "false");
+              menuToggle.setAttribute("aria-label", "Открыть меню");
+              menuToggle.querySelector("span").textContent = "☰";
+            });
+          });
+        }
+
+        const year = document.querySelector("#year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        const revealElements = document.querySelectorAll("[data-reveal]");
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                currentObserver.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.12 }
+          );
+          revealElements.forEach((element) => observer.observe(element));
+        } else {
+          revealElements.forEach((element) => element.classList.add("is-visible"));
+        }
+      })();
+    </script>
+  </body>
+</html>
