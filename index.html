@@ -355,6 +355,26 @@
         margin-top: 32px;
       }
 
+      .hero-prices {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 24px;
+      }
+
+      .price-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(6, 43, 99, 0.12);
+        border-radius: 999px;
+        color: var(--navy);
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 0.84rem;
+        font-weight: 800;
+      }
+
       .hero-note {
         display: flex;
         align-items: center;
@@ -666,6 +686,20 @@
         margin: 0;
         color: #627286;
         font-size: 0.9rem;
+      }
+
+      .service-price {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        margin-top: 14px;
+        color: var(--orange);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+
+      .service-card:nth-child(4) .service-price {
+        color: #ffad8c;
       }
 
       .service-card:nth-child(4) p {
@@ -1027,6 +1061,10 @@
         color: var(--orange);
       }
 
+      .mobile-contact-bar {
+        display: none;
+      }
+
       [data-reveal] {
         opacity: 0;
         transform: translateY(18px);
@@ -1074,6 +1112,9 @@
       }
 
       @media (max-width: 700px) {
+        body {
+          padding-bottom: 76px;
+        }
         .container {
           width: min(var(--container), calc(100% - 32px));
         }
@@ -1145,6 +1186,15 @@
 
         .hero-actions .button {
           min-height: 56px;
+        }
+
+        .hero-prices {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .price-pill {
+          justify-content: center;
         }
 
         .hero-preview {
@@ -1236,6 +1286,38 @@
           align-items: flex-start;
           flex-direction: column;
         }
+
+        .mobile-contact-bar {
+          position: fixed;
+          z-index: 50;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+          padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+          border-top: 1px solid rgba(6, 43, 99, 0.12);
+          background: rgba(255, 255, 255, 0.96);
+          box-shadow: 0 -12px 30px rgba(6, 43, 99, 0.12);
+          backdrop-filter: blur(14px);
+        }
+
+        .mobile-contact-bar a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 48px;
+          border-radius: 999px;
+          color: var(--white);
+          background: var(--navy);
+          font-size: 0.88rem;
+          font-weight: 900;
+        }
+
+        .mobile-contact-bar a:last-child {
+          background: var(--green);
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1279,13 +1361,8 @@
           <a class="nav-link" href="#payment">Оплата</a>
           <a class="nav-link" href="#process">Как работаем</a>
           <a class="nav-link" href="#contacts">Контакты</a>
-          <a
-            class="button button-primary button-small"
-            href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Заказать уборку <span class="arrow" aria-hidden="true">↗</span>
+          <a class="button button-primary button-small" href="tel:+77472818076" data-lead="phone-header">
+            Позвонить <span class="arrow" aria-hidden="true">↗</span>
           </a>
         </nav>
       </div>
@@ -1302,20 +1379,19 @@
               ремонта, влажная уборка и химчистка мягкой мебели — подберём подходящий формат под вашу
               задачу.
             </p>
+            <div class="hero-prices" aria-label="Базовые цены">
+              <span class="price-pill">Влажная уборка от 15 000 ₸</span>
+              <span class="price-pill">Химчистка дивана от 9 990 ₸</span>
+            </div>
             <div class="hero-actions">
-              <a
-                class="button button-primary"
-                href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Заказать уборку <span class="arrow" aria-hidden="true">→</span>
+              <a class="button button-primary" href="tel:+77472818076" data-lead="phone-hero">
+                Позвонить: 8 747 281 80 76 <span class="arrow" aria-hidden="true">→</span>
               </a>
-              <a class="button button-outline" href="#services">
-                Посмотреть услуги <span class="arrow" aria-hidden="true">↓</span>
+              <a class="button button-outline" href="https://wa.me/77472818076" target="_blank" rel="noreferrer" data-lead="whatsapp-hero">
+                Написать в WhatsApp <span class="arrow" aria-hidden="true">↗</span>
               </a>
             </div>
-            <div class="hero-note">Работаем по Астане · стоимость рассчитываем по объёму работ</div>
+            <div class="hero-note">Работаем по Астане · быстро рассчитаем стоимость по телефону</div>
           </div>
 
           <div class="hero-preview" aria-label="Преимущества Best Clear Astana" data-reveal>
@@ -1357,6 +1433,7 @@
               <div>
                 <h3>Генеральная уборка</h3>
                 <p>Тщательная уборка пространства, когда хочется навести порядок от и до.</p>
+                <span class="service-price">Цена после оценки объёма</span>
               </div>
             </article>
 
@@ -1368,6 +1445,7 @@
               <div>
                 <h3>Уборка после ремонта</h3>
                 <p>Поможем убрать строительную пыль и привести помещение в аккуратный вид.</p>
+                <span class="service-price">Расчёт по площади и объёму</span>
               </div>
             </article>
 
@@ -1379,6 +1457,7 @@
               <div>
                 <h3>Влажная уборка</h3>
                 <p>Свежесть и порядок для дома, квартиры или другого помещения.</p>
+                <span class="service-price">от 15 000 ₸</span>
               </div>
             </article>
 
@@ -1390,6 +1469,7 @@
               <div>
                 <h3>Химчистка мягкой мебели</h3>
                 <p>Уточним материал, объём и задачу, чтобы подобрать формат работ.</p>
+                <span class="service-price">диван от 9 990 ₸</span>
               </div>
             </article>
           </div>
@@ -1494,16 +1574,14 @@
             <div>
               <span class="eyebrow">Готовы начать?</span>
               <h2>Расскажите, что нужно убрать.</h2>
-              <p>Напишите в Instagram — уточним задачу и подскажем подходящий формат.</p>
+              <p>Позвоните или напишите в WhatsApp — уточним задачу, цену и свободное время.</p>
             </div>
             <div class="contact-actions">
-              <a
-                class="button button-primary"
-                href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Написать в Instagram <span class="arrow" aria-hidden="true">↗</span>
+              <a class="button button-primary" href="tel:+77472818076" data-lead="phone-contact">
+                Позвонить: 8 747 281 80 76 <span class="arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-outline" href="https://wa.me/77472818076" target="_blank" rel="noreferrer" data-lead="whatsapp-contact">
+                WhatsApp <span class="arrow" aria-hidden="true">↗</span>
               </a>
               <a class="button button-outline" href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">
                 Открыть 2GIS <span class="arrow" aria-hidden="true">↗</span>
@@ -1515,7 +1593,7 @@
             <div>
               <div class="location-symbol" aria-hidden="true">⌖</div>
               <h3>Best Clear Astana</h3>
-              <p>Клининг и химчистка мягкой мебели в Астане. Найдите нас в 2GIS.</p>
+              <p>Клининг и химчистка мягкой мебели в Астане. Ежедневно принимаем заявки по телефону.</p>
             </div>
             <a class="side-link" href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">
               <span>Открыть карточку в 2GIS</span>
@@ -1530,11 +1608,18 @@
       <div class="container footer-inner">
         <span>© <span id="year"></span> Best Clear Astana</span>
         <div class="footer-links">
+          <a href="tel:+77472818076" data-lead="phone-footer">8 747 281 80 76</a>
+          <a href="https://wa.me/77472818076" target="_blank" rel="noreferrer" data-lead="whatsapp-footer">WhatsApp</a>
           <a href="https://www.instagram.com/best_clear_astana?stkn=ajF5azZ2dzRhd3Br" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://2gis.kz/astana/geo/70000001089691862" target="_blank" rel="noreferrer">2GIS</a>
         </div>
       </div>
     </footer>
+
+    <nav class="mobile-contact-bar" aria-label="Быстрая связь">
+      <a href="tel:+77472818076" data-lead="phone-sticky">Позвонить</a>
+      <a href="https://wa.me/77472818076" target="_blank" rel="noreferrer" data-lead="whatsapp-sticky">WhatsApp</a>
+    </nav>
 
     <script>
       (() => {
@@ -1561,6 +1646,20 @@
 
         const year = document.querySelector("#year");
         if (year) year.textContent = new Date().getFullYear();
+
+        document.querySelectorAll("[data-lead]").forEach((link) => {
+          link.addEventListener("click", () => {
+            const source = link.getAttribute("data-lead") || "contact";
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: "lead_click", lead_source: source });
+            if (typeof window.gtag === "function") {
+              window.gtag("event", "generate_lead", {
+                method: source.startsWith("phone") ? "phone" : "whatsapp",
+                lead_source: source,
+              });
+            }
+          });
+        });
 
         const revealElements = document.querySelectorAll("[data-reveal]");
         if ("IntersectionObserver" in window) {
